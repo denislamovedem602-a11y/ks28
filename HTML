@@ -1,3 +1,4 @@
+
 <html lang="ru">
 <head>
 <meta charset="UTF-8" />
@@ -5,16 +6,30 @@
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
 <div class="container">
-  <h1>Мои задачи</h1>
-  <div class="input-group">
-    <input id="taskInput" placeholder="Введите новую задачу" />
-    <button id="addBtn">Добавить</button>
-  </div>
-  <ul id="taskList"></ul>
+<h1>Мои задачи</h1>
+<div class="tabs">
+<button id="tasksTab" class="tab active">Задачи</button>
+<button id="statsTab" class="tab">Статистика</button>
 </div>
-
+<div class="theme-toggle">
+<label><input type="checkbox" id="themeSwitch" /> Темная тема</label>
+</div>
+<div id="tasksContent" class="tab-content active">
+<div class="input-group">
+<input id="taskInput" placeholder="Введите задачу" />
+<button id="addBtn">Добавить</button>
+</div>
+<ul id="taskList"></ul>
+</div>
+<div id="statsContent" class="tab-content">
+<div class="stats">
+<p>Всего: <span id="totalCount">0</span></p>
+<p>Выполнено: <span id="completedCount">0</span></p>
+<p>Активных: <span id="activeCount">0</span></p>
+</div>
+</div>
+</div>
 <script src="script.js"></script>
 </body>
 </html>
